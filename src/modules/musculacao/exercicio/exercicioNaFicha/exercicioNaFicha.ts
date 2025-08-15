@@ -22,6 +22,15 @@ export default class ExercicioNaFicha {
     getConcluido(): boolean {
         return this.concluido;
     }
+    getNomeExercicio():string{
+        return this.exercicio.getNome();
+    }
+    getDescricaoExercicio():string{
+        return this.exercicio.getDescricao();
+    }
+    getFocoMuscularExercicio():string{
+        return this.exercicio.getFocoMuscular();
+    }
     setExercicio(exercicio: Exercicio): void {
         this.exercicio = exercicio;
     }
@@ -34,6 +43,16 @@ export default class ExercicioNaFicha {
     setNaoConcluido(): void {
         this.concluido = false;
     }
+    setNomeExercicio(nome: string): void {
+        this.exercicio.setNome(nome);
+    }
+    setDescricaoExercicio(nome:string):void{
+        this.exercicio.setDescricao(nome);
+    }
+    setFocoMuscularExercicio(nome:string):void{
+        this.exercicio.setFocoMuscular(nome);
+    }
+    
     adicionaSerie(carga:number,repeticao:number,tempoDescanso:number):void{
         this.series.push(new Serie(carga,repeticao, tempoDescanso));
     }

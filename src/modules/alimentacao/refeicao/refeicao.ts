@@ -24,15 +24,15 @@ export default class Refeicao{
     }
     getCarboidrato():number {
         return this.alimentos.reduce((total, alimento) =>
-             total + alimento.getAlimento().getCarboidrato() * alimento.getQuantidade(), 0);
+             total + alimento.getCarboidrato() * alimento.getQuantidade(), 0);
     }
     getProteina():number {
         return this.alimentos.reduce((total, alimento) =>
-            total + alimento.getAlimento().getProteina() * alimento.getQuantidade(), 0);
+            total + alimento.getProteina() * alimento.getQuantidade(),0);
     }
     getGordura():number {
         return this.alimentos.reduce((total, alimento) =>
-            total + alimento.getAlimento().getGordura() * alimento.getQuantidade(), 0);
+            total + alimento.getGordura() * alimento.getQuantidade(), 0);
     }
 
     adicionaAlimento(alimento: AlimentoNaRefeicao): void {
@@ -46,7 +46,7 @@ export default class Refeicao{
     }
     calculaCaloriaRefeicao():number{
         return this.alimentos.reduce((total,alimento)=>{
-            return total + alimento.getCaloria();
+            return total + alimento.calculaCaloria();
         }, 0);
     }
 }

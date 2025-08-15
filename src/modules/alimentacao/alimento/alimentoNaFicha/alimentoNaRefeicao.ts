@@ -12,12 +12,20 @@ export default class AlimentoNaRefeicao{
     getAlimento(): Alimento {
         return this.alimento;
     }
-
     getQuantidade(): number {
         return this.quantidade;
     }
-
-    getCaloria(): number {
+    getCarboidrato(): number {
+        return this.alimento.getCarboidrato() * this.quantidade;
+    }
+    getProteina(): number {
+        return this.alimento.getProteina() * this.quantidade;
+    }
+    getGordura(): number {
+        return this.alimento.getGordura() * this.quantidade;
+    }  
+    calculaCaloria(): number {
         return this.alimento.getCaloria() * this.quantidade;
     }
+
 }
