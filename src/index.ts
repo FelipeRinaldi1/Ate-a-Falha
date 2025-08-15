@@ -55,3 +55,5 @@ fichaTeste.adicionaExercicio(supinoNaFicha);
 
 var fichaTesteExecutavel = new FichaExecutavel(fichaTeste);
 fichaTesteExecutavel.mostraSeries(0);
+
+console.log("teste")
