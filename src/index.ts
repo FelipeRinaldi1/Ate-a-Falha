@@ -1,7 +1,7 @@
-import type Alimento from "./modules/alimentacao/alimento/alimento/alimento.js";
-import type AlimentoNaRefeicao from "./modules/alimentacao/alimento/alimentoNaFicha/alimentoNaRefeicao.js";
+import type Alimento from "./modules/alimentacao/alimento/alimento.js";
+import type AlimentoNaRefeicao from "./modules/alimentacao/alimento/alimentoNaRefeicao.js";
 import type Dieta from "./modules/alimentacao/dieta/dieta.js";
-import GerenciaAlimentacao from "./modules/alimentacao/gerenciaAlimentacao/gerenciaAlimentacao.js"
+import GerenciaAlimentacao from "./modules/alimentacao/gerenciaAlimentacao.js"
 import type Refeicao from "./modules/alimentacao/refeicao/refeicao.js";
 
 const gerenciaAlimentacao = new GerenciaAlimentacao();
@@ -40,12 +40,12 @@ gerenciaAlimentacao.removeAlimentoNaRefeicao(refeicaoObj, frangoNaRefeicao);
 gerenciaAlimentacao.trocaMetasDieta(dietaObj, 500, 160, 64, 25, 4);
 console.log(dietaObj.getMeta());
 
-import Exercicio from "./modules/musculacao/exercicio/exercicio/exercicio.js";
-import Serie from "./modules/musculacao/exercicio/serie/serie.js";
-import ExercicioNaFicha from "./modules/musculacao/exercicio/exercicioNaFicha/exercicioNaFicha.js";
-import FichaEspecifica from "./modules/musculacao/ficha/fichaEspecifica/fichaEspecifica.js";
-import FichaGlobal from "./modules/musculacao/ficha/fichaGlobal/fichaGlobal.js";
-import FichaExecutavel from "./modules/musculacao/ficha/fichaExecutavel/fichaExecutavel.js";
+import Exercicio from "./modules/musculacao/exercicio/exercicio.js";
+import Serie from "./modules/musculacao/exercicio/serie.js";
+import ExercicioNaFicha from "./modules/musculacao/exercicio/exercicioNaFicha.js";
+import FichaEspecifica from "./modules/musculacao/ficha/fichaEspecifica.js";
+import FichaGlobal from "./modules/musculacao/ficha/fichaGlobal.js";
+import FichaExecutavel from "./modules/musculacao/ficha/fichaExecutavel.js";
 
 var supino = new Exercicio("Supino","Empurrar a barra contraindo o peitoral" ,"Peitoral");
 var supinoNaFicha = new ExercicioNaFicha(supino,4,12,60,50);

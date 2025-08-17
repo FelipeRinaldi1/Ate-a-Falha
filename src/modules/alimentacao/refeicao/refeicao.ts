@@ -1,4 +1,4 @@
-import AlimentoNaRefeicao from "../alimento/alimentoNaFicha/alimentoNaRefeicao.js";
+import AlimentoNaRefeicao from "../alimento/alimentoNaRefeicao.js";
 
 export default class Refeicao{
     private alimentos: AlimentoNaRefeicao[];

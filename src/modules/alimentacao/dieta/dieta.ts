@@ -1,5 +1,5 @@
 import Refeicao from "../refeicao/refeicao.js";
-import MetaDieta from "./metasDieta/metasDieta.js";
+import MetaDieta from "./metasDieta.js";
 
 export default class Dieta{
     private nome: string;

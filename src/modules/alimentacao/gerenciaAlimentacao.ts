@@ -1,8 +1,8 @@
-import Alimento from "../alimento/alimento/alimento.js";
-import AlimentoNaRefeicao from "../alimento/alimentoNaFicha/alimentoNaRefeicao.js";
-import Refeicao from "../refeicao/refeicao.js";
-import MetaDieta from "../dieta/metasDieta/metasDieta.js";
-import Dieta from "../dieta/dieta.js";
+import Alimento from "./alimento/alimento.js";
+import AlimentoNaRefeicao from "./alimento/alimentoNaRefeicao.js";
+import Refeicao from "./refeicao/refeicao.js";
+import MetaDieta from "./dieta/metasDieta.js";
+import Dieta from "./dieta/dieta.js";
 
 export default class GerenciaAlimentacao{
     constructor(){}

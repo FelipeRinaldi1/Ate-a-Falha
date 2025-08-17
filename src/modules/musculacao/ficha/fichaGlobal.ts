@@ -1,4 +1,4 @@
-import FichaEspecifica from "../fichaEspecifica/fichaEspecifica.js";
+import FichaEspecifica from "./fichaEspecifica.js";
 export default class FichaGlobal{
     private nome:string;
     private tags:string[] = [];

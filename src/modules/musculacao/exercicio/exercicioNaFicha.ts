@@ -1,6 +1,5 @@
-import Exercicio from "../exercicio/exercicio.js";
-import Serie from "../serie/serie.js";
-
+import Exercicio from "./exercicio.js";
+import Serie from "./serie.js";
 export default class ExercicioNaFicha {
     private exercicio: Exercicio;
     private series: Serie[];
@@ -66,7 +65,8 @@ export default class ExercicioNaFicha {
             console.log(`Série ${index + 1}: 
                 Carga: ${serie.getCarga()}, 
                 Repetições: ${serie.getRepeticoes()}, 
-                Tempo de Descanso: ${serie.getTempoDescanso()}`);
+                Tempo de Descanso: ${serie.getTempoDescanso()}
+                Concluido: ${serie.getConcluido()}`);
         });
     }
 }

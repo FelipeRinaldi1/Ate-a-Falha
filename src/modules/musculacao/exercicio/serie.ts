@@ -1,3 +1,5 @@
+import { read } from "fs";
+
 export default class Serie{
     private carga:number;
     private repeticoes:number;
@@ -30,10 +32,20 @@ export default class Serie{
     setTempoDescanso(tempoDescanso: number): void {
         this.tempoDescanso = tempoDescanso;
     }
-    setConcluido(concluido: boolean): void {
-        this.concluido = concluido;
+    setConcluido(): void {
+        this.concluido = true;
     }
     setNaoConcluido():void{
         this.concluido= false;
+    }
+    executaSerie():void{
+        const readline = require('readline')
+        const rl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+        rl.question("?",()=>{
+            this.setConcluido()
+        })
     }
 }

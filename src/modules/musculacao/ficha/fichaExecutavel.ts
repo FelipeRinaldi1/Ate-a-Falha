@@ -1,7 +1,7 @@
-import type Serie from "../../exercicio/serie/serie.js";
-import type Exercicio from "../../exercicio/exercicio/exercicio.js";
-import ExercicioNaFicha from "../../exercicio/exercicioNaFicha/exercicioNaFicha.js";
-import FichaEspecifica from "../fichaEspecifica/fichaEspecifica.js";
+import type Serie from "../exercicio/serie.js";
+import type Exercicio from "../exercicio/exercicio.js";
+import ExercicioNaFicha from "../exercicio/exercicioNaFicha.js";
+import FichaEspecifica from "./fichaEspecifica.js";
 
 export default class FichaExecutavel {
     listaExercicios: ExercicioNaFicha[];
@@ -24,5 +24,8 @@ export default class FichaExecutavel {
         this.listaExercicios.forEach((ExercicioNaFicha,index)=>{
             console.log(`Exercicio ${index +1}: ${ExercicioNaFicha.getNomeExercicio()}`)
         });
-    } 
+    }
+    executaTreino(){
+        this.listaExercicios.forEach
+    }
 }

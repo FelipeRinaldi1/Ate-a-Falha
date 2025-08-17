@@ -1,19 +1,19 @@
-import ExercicioNaFicha from "../../exercicio/exercicioNaFicha/exercicioNaFicha.js";
+import ExercicioNaFicha from "../exercicio/exercicioNaFicha.js";
 
 export default class FichaEspecifica {
-    private diaCorrespondente: string;
+    private dia: string;
     private listaExercicios: ExercicioNaFicha[];
     private musculosTrabalhados: string[];
-    constructor(diaCorrespondente: string) {
-        this.diaCorrespondente = diaCorrespondente;
+    constructor(dia: string) {
+        this.dia = dia;
         this.listaExercicios = [];
         this.musculosTrabalhados = [];
     }
     getListaExercicios(): ExercicioNaFicha[] {
         return this.listaExercicios;
     }
-    getDiaCorrespondente(): string {
-        return this.diaCorrespondente;
+    getdia(): string {
+        return this.dia;
     }
     getMusculosTrabalhados(): string[] {
         return this.musculosTrabalhados;
@@ -21,8 +21,8 @@ export default class FichaEspecifica {
     setListaExercicios(listaExercicios: ExercicioNaFicha[]): void {
         this.listaExercicios = listaExercicios;
     }
-    setDiaCorrespondente(diaCorrespondente: string): void {
-        this.diaCorrespondente = diaCorrespondente;
+    setdia(dia: string): void {
+        this.dia = dia;
     }
     setMusculosTrabalhados(musculosTrabalhados: string[]): void {
         this.musculosTrabalhados = musculosTrabalhados;
