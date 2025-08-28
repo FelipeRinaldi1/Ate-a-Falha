@@ -34,5 +34,3 @@ gerenciaMusculacao.adicionaFichaEspecifica(0, "Segunda-feira");
 gerenciaMusculacao.adicionaExercicioNaFicha(0, 0, 0, 3, 12, 60, 100);
 gerenciaMusculacao.adicionaExercicioNaFicha(0, 0, 2, 5, 8, 120, 200);
 gerenciaMusculacao.adicionaExercicioNaFicha(0, 0, 1, 4, 10, 90, 150);
-
-console.log(bancoMusculacao.getFichaGlobal(0)?.getFichasEspecificas().at(0)?.getListaExercicios());
