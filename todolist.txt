@@ -1,0 +1,24 @@
+Alimentação:
+    Criar MetasDieta na criação da dieta, com base nos dados corporais do usuario (Placeholder)
+    Funcionalidades da parte de Agua
+    Busca de Alimentos
+    Criar alimento Personalizado
+
+    Função de Exportar dieta (?)
+
+
+
+Musculação:
+    Execução de Treino
+    Criar Menu de Treino
+    Criar Ficha Ativa
+
+    Função de Exportar Treino (?)
+    Adaptação para o Power Lifting(?)
+
+
+
+Usuario:
+    Criar sistema de cadastro/login de usuarios
+    Composição corporal
+    Progressão de Metricas

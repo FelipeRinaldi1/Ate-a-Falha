@@ -23,7 +23,10 @@ export default class AlimentoNaRefeicao{
     }
     getGordura(): number {
         return this.alimento.getGordura() * this.quantidade;
-    }  
+    }
+    getFibra(): number {
+        return this.alimento.getFibra() * this.quantidade;
+    }
     calculaCaloria(): number {
         return this.alimento.getCaloria() * this.quantidade;
     }

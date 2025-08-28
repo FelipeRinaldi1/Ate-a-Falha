@@ -38,14 +38,4 @@ export default class Serie{
     setNaoConcluido():void{
         this.concluido= false;
     }
-    executaSerie():void{
-        const readline = require('readline')
-        const rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
-        });
-        rl.question("?",()=>{
-            this.setConcluido()
-        })
-    }
 }

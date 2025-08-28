@@ -1,3 +1,4 @@
+import type Exercicio from "../exercicio/exercicio.js";
 import ExercicioNaFicha from "../exercicio/exercicioNaFicha.js";
 
 export default class FichaEspecifica {
@@ -27,13 +28,14 @@ export default class FichaEspecifica {
     setMusculosTrabalhados(musculosTrabalhados: string[]): void {
         this.musculosTrabalhados = musculosTrabalhados;
     }
-    adicionaExercicio(exercicio: ExercicioNaFicha): void {
-        this.listaExercicios.push(exercicio);
+    adicionaExercicio(exercicio:Exercicio,numeroSerie:number,numeroRepeticao:number,tempoDescanso:number,carga:number): ExercicioNaFicha {
+        const exercicioNaFicha = new ExercicioNaFicha(exercicio,numeroSerie,numeroRepeticao,tempoDescanso,carga);
+        this.listaExercicios.push(exercicioNaFicha);
+        return exercicioNaFicha;
     }
-    removeExercicio(exercicio: ExercicioNaFicha): void {
-        const index = this.listaExercicios.indexOf(exercicio);
-        if (index > -1) {
-            this.listaExercicios.splice(index, 1);
+    removeExercicio(indexExercicio:number): void {
+        if (indexExercicio > -1 && indexExercicio < this.listaExercicios.length) {
+            this.listaExercicios.splice(indexExercicio, 1);
         }
     }
 }

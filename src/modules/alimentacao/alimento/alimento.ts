@@ -5,12 +5,12 @@ export default class Alimento{
     private gordura:number;
     private fibra:number;
     private caloria:number;
-    constructor(nomeAlimento:string,carboidrato:number,proteina:number,gordura:number,fibra:number){
+    constructor(nomeAlimento:string,carboidrato100g:number,proteina100g:number,gordura100g:number,fibra100g:number){
         this.nomeAlimento = nomeAlimento
-        this.carboidrato = carboidrato
-        this.proteina = proteina
-        this.gordura = gordura
-        this.fibra = fibra
+        this.carboidrato = carboidrato100g / 100
+        this.proteina = proteina100g / 100
+        this.gordura = gordura100g / 100
+        this.fibra =  fibra100g / 100
         this.caloria = this.calcularCaloria()
     }
 
@@ -39,23 +39,23 @@ export default class Alimento{
     }
 
     setCarboidrato(carboidrato:number):void{
-        this.carboidrato = carboidrato
+        this.carboidrato = carboidrato / 100;
     }
 
     setProteina(proteina:number):void{
-        this.proteina = proteina
+        this.proteina = proteina / 100;
     }
 
     setGordura(gordura:number):void{
-        this.gordura = gordura
+        this.gordura = gordura / 100;
     }
 
     setFibra(fibra:number):void{
-        this.fibra = fibra
+        this.fibra = fibra / 100;
     }
 
     calcularCaloria():number{
-        return (this.carboidrato * 4) + (this.proteina * 4) + (this.gordura * 9) - (this.fibra * 2);
+        return (this.carboidrato * 4) + (this.proteina * 4) + (this.gordura * 9);
     }
 
     getCaloria():number{

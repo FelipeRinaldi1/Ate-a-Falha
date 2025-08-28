@@ -5,30 +5,47 @@ export default class Dieta{
     private nome: string;
     private refeicoes: Refeicao[];
     private meta: MetaDieta;
-
+    private agua:number;
+    
     constructor(nome: string) {
         this.nome = nome;
         this.refeicoes = [];
         this.meta = new MetaDieta(0, 0, 0, 0, 0);
+        this.agua = 0;
     }
-
-    getNome(): string {
-        return this.nome;
+    getCarboidrato():number{
+        return this.refeicoes.reduce((total, refeicao) => 
+            total + refeicao.getCarboidrato(),0);
     }
-    getRefeicoes(): Refeicao[] {
-        return this.refeicoes;
+    getProteina():number{
+        return this.refeicoes.reduce((total, refeicao) => 
+            total + refeicao.getProteina(),0);
     }
-    getMeta(): MetaDieta {
-        return this.meta;
+    getGordura():number{
+        return this.refeicoes.reduce((total, refeicao) => 
+            total + refeicao.getGordura(),0);
     }
-    setNome(nome: string): void {
-        this.nome = nome;
+    getFibra():number{
+        return this.refeicoes.reduce((total, refeicao) => 
+            total + refeicao.getFibra(),0);
     }
-    setRefeicoes(refeicoes: Refeicao[]): void {
-        this.refeicoes = refeicoes;
+    getMetaCarboidrato():number{
+        return this.meta.getMetaCarboidrato();
     }
-    setMeta(meta: MetaDieta): void {
-        this.meta = meta;
+    getMetaProteina():number{
+        return this.meta.getMetaProteina();
+    }
+    getMetaGordura():number{
+        return this.meta.getMetaGordura();
+    }
+    getMetaFibra():number{
+        return this.meta.getMetaFibra();
+    }
+    getMetaAgua():number{
+        return this.meta.getMetaAgua();
+    }
+    getMetaCaloria():number{
+        return this.meta.getMetaCaloria();
     }
     setMetaCarboidrato(carboidrato:number):void{
         this.meta.setMetaCarboidrato(carboidrato);
@@ -46,7 +63,43 @@ export default class Dieta{
         this.meta.setMetaAgua(agua);
     }
 
-    adicionaRefeicao(refeicao: Refeicao): void {
+    getNome(): string {
+        return this.nome;
+    }
+    getRefeicoes(): Refeicao[] {
+        return this.refeicoes;
+    }
+    getMeta(): MetaDieta {
+        return this.meta;
+    }
+    getAgua():number{
+        return this.agua;
+    }
+    setNome(nome: string): void {
+        this.nome = nome;
+    }
+    setRefeicoes(refeicoes: Refeicao[]): void {
+        this.refeicoes = refeicoes;
+    }
+    setMeta(meta: MetaDieta): void {
+        this.meta = meta;
+    }
+    setAgua(agua: number): void {
+        this.agua = agua;
+    }
+    calculaCaloriaDieta(): number {
+        return this.refeicoes.reduce((total, refeicao) => 
+            total + refeicao.calculaCaloriaRefeicao(),0);
+    }
+    atualizaMetas(metaCarboidrato:number, metaProteina:number, metaGordura:number, metaFibra:number, metaAgua:number):void{
+        this.setMetaCarboidrato(metaCarboidrato);
+        this.setMetaProteina(metaProteina);
+        this.setMetaGordura(metaGordura);
+        this.setMetaFibra(metaFibra);
+        this.setMetaAgua(metaAgua);
+    }
+    adicionaRefeicao(nome: string): void {
+        const refeicao = new Refeicao(nome);
         this.refeicoes.push(refeicao);
     }
     removeRefeicao(refeicao: Refeicao): void {
@@ -55,8 +108,5 @@ export default class Dieta{
             this.refeicoes.splice(index, 1);
         }
     }
-    calculaCaloriaDieta(): number {
-        return this.refeicoes.reduce((total, refeicao) => 
-            total + refeicao.calculaCaloriaRefeicao(),0);
-    }
+
 }

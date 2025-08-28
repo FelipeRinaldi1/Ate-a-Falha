@@ -4,7 +4,8 @@ import ExercicioNaFicha from "../exercicio/exercicioNaFicha.js";
 import FichaEspecifica from "./fichaEspecifica.js";
 
 export default class FichaExecutavel {
-    listaExercicios: ExercicioNaFicha[];
+    private listaExercicios: ExercicioNaFicha[];
+    private concluido = false
 
     constructor(ficha: FichaEspecifica) {
         this.listaExercicios = ficha.getListaExercicios();
@@ -15,17 +16,30 @@ export default class FichaExecutavel {
     setListaExercicios(lista:ExercicioNaFicha[]):void{
         this.listaExercicios = lista;
     }
-    mostraSeries(index:number):void{
-        const exercicio= this.listaExercicios[index];
-        console.log("Exercicio: " + exercicio?.getNomeExercicio());
-        exercicio?.mostraSeries();
+    getConcluido():boolean{
+        return this.concluido
     }
+    setConcluido():void{
+        this.concluido = true
+    }
+    setNaoConcluido():void{
+        this.concluido = false
+    }
+    mostraExercicio(index:number):void{
+        console.log(this.listaExercicios[index])
+    }
+
     mostraExercicios():void{
         this.listaExercicios.forEach((ExercicioNaFicha,index)=>{
-            console.log(`Exercicio ${index +1}: ${ExercicioNaFicha.getNomeExercicio()}`)
+            console.log(`Exercicio ${index +1}: ${ExercicioNaFicha.mostraExercicio()}`)
         });
     }
-    executaTreino(){
-        this.listaExercicios.forEach
+    executaTreino():void{
+        if(!this.listaExercicios){
+            return;
+        }
+        while(this.concluido ===false){
+            
+        }
     }
 }

@@ -51,18 +51,47 @@ export default class ExercicioNaFicha {
     setFocoMuscularExercicio(nome:string):void{
         this.exercicio.setFocoMuscular(nome);
     }
-    
+
+    //Metodos Da classe
+
     adicionaSerie(carga:number,repeticao:number,tempoDescanso:number):void{
         this.series.push(new Serie(carga,repeticao, tempoDescanso));
     }
+
     removeSerie(index:number):void{
         if (index >= 0 && index < this.series.length){
             this.series.splice(index, 1);
         }
     }
-    mostraSeries():void{
+
+    checkConcluido():boolean{
+        if(this.series.some(serie=>{serie.getConcluido() === false})){
+            return false;
+        }
+        return true;
+    }
+
+    executaSerie(index:number):void{
+        this.series[index]?.setConcluido()
+        this.concluido = this.checkConcluido()
+    }
+
+    desExecutaSerie(index:number):void{
+        this.series[index]?.setNaoConcluido()
+        this.concluido = this.checkConcluido()
+    }
+
+    concluiExercicio():void{
+        this.series.forEach(serie => {
+            serie.setConcluido()
+        });
+        this.setConcluido();
+    }
+    
+    mostraExercicio():void{
+        console.log(`Exercicio :${this.getNomeExercicio()}`)
         this.series.forEach((serie, index) => {
-            console.log(`Série ${index + 1}: 
+            console.log(` Série ${index + 1}: 
                 Carga: ${serie.getCarga()}, 
                 Repetições: ${serie.getRepeticoes()}, 
                 Tempo de Descanso: ${serie.getTempoDescanso()}
