@@ -108,5 +108,9 @@ export default class Dieta{
             this.refeicoes.splice(index, 1);
         }
     }
+    importaRefeicao(refeicao: Refeicao): void {
+        this.refeicoes.push(refeicao);
+    }
+
 
 }

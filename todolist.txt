@@ -1,7 +1,6 @@
 Alimentação:
     Criar MetasDieta na criação da dieta, com base nos dados corporais do usuario (Placeholder)
     Funcionalidades da parte de Agua
-    Busca de Alimentos
     Criar alimento Personalizado
 
     Função de Exportar dieta (?)
