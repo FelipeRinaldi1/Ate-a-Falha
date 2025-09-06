@@ -13,8 +13,7 @@ gerenciaAlimentacao.adicionaRefeicaoNaDieta(0,"Café da Manhã")
 gerenciaAlimentacao.criaAlimento("AlimentoTeste",1,1,1,0);
 gerenciaAlimentacao.adicionaAlimentoNaRefeicao(0,0,0,100)
 
-const dietaExportada = gerenciaAlimentacao.exportaDieta(0);
-const dietaImportada = gerenciaAlimentacao.importaDieta(dietaExportada);
-gerenciaAlimentacao.getBancoDeDados().adicionarDieta(dietaImportada);
 
-menuAlimentacao.menuPrincipal(1);
+gerenciaAlimentacao.acrescentaAguaNaDieta(0,500);
+console.log(gerenciaAlimentacao.exportaAlimento(0))
+menuAlimentacao.menuPrincipal(0);

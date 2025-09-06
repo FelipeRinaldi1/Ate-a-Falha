@@ -108,6 +108,10 @@ export default class Dieta{
             this.refeicoes.splice(index, 1);
         }
     }
+    acrescentaAgua(quantidade: number): void {
+        this.agua += quantidade;
+    }
+
     importaRefeicao(refeicao: Refeicao): void {
         this.refeicoes.push(refeicao);
     }

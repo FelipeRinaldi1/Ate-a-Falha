@@ -179,4 +179,10 @@ export default class GerenciaAlimentacao{
     }
     //ARRUMAR AQUI
 
+    //Agua
+    acrescentaAguaNaDieta(indexDieta:number, quantidade:number):void{
+        const dieta = this.bd.getDieta(indexDieta);
+        if(!dieta) throw new Error("Dieta não encontrada");
+        dieta.acrescentaAgua(quantidade);
+    }
 }
