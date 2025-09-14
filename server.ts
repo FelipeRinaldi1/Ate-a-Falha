@@ -1,5 +1,3 @@
-import App from './src/app.js'
+import app from './src/app.js'
 
-const appServer = new App(3000)
-
-module.exports = appServer.getServer();
+module.exports = app

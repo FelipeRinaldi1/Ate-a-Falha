@@ -2,7 +2,7 @@ import express from 'express';
 import methodOverride from 'method-override';
 import path from 'path';
 
-export default class App {
+class App {
   private server: express.Application;
   private port: number;
 
@@ -30,3 +30,5 @@ export default class App {
     return this.server;
   }
 }
+const app = new App(3000)
+export default app
