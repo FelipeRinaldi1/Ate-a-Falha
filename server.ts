@@ -1,8 +1,5 @@
-import { server } from 'typescript'
-import app from './src/app.js'
+import App from './src/app.js'
 
-const appServer = app
+const appServer = new App(3000)
 
-app.get("/",(req,res)=>{
-    res.send("hello")
-})
+module.exports = appServer.getServer();
