@@ -1,14 +1,12 @@
-import Exercicio from "./exercicio/exercicio.js";
+import Exercicio from "./exercicio/exercicio.js"
 import Serie from "./exercicio/serie.js";
 import ExercicioNaFicha from "./exercicio/exercicioNaFicha.js";
-
 import FichaEspecifica from "./ficha/fichaEspecifica.js";
 import FichaExecutavel from "./ficha/fichaExecutavel.js";
 import FichaGlobal from "./ficha/fichaGlobal.js";
-
 import BancoMusculacao from "./bancoMusculacao.js";
 
-export default class GerenciaMusculacao{
+export default class WorkoutManager{
     private banco: BancoMusculacao;
     constructor(bancoMusculacao: BancoMusculacao){
         this.banco = bancoMusculacao;

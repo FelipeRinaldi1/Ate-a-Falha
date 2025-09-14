@@ -3,7 +3,7 @@ import Alimento from "./alimento/alimento.js";
 import Refeicao from "./refeicao/refeicao.js";
 import Dieta from "./dieta/dieta.js";
 
-export default class GerenciaAlimentacao{
+export default class nutritionManager{
     private bd:BancoAlimentacao;
     constructor(bancoDeDados:BancoAlimentacao){
         this.bd = bancoDeDados
