@@ -7,6 +7,6 @@ app.getServer().get("/",(req,res)=>{
     res.send("hello")
 })
 
-app.getServer().listen(app.getPort,()=>{
+app.getServer().listen(app.getPort(),()=>{
     console.log("Servidor aberto na porta",app.getPort())
 })
