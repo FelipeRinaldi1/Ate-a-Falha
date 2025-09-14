@@ -31,4 +31,6 @@ class App {
   }
 }
 const app = new App(3000)
-export default app
+const server = app.getServer();
+
+export default server

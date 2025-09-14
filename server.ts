@@ -1,3 +1,3 @@
-import app from './src/app.js'
+import server from './src/app.js'
 
-module.exports = app.getServer();
+module.exports = server
