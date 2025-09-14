@@ -1,11 +1,8 @@
 import { server } from 'typescript'
-import App from './src/app.js'
+import app from './src/app.js'
 
-const port = 3000
-const app = new App(port)
+const appServer = app
 
-app.getServer().get("/",(req,res)=>{
+app.get("/",(req,res)=>{
     res.send("hello")
 })
-
-module.exports = app.getServer()
