@@ -14,3 +14,15 @@ Usuario:
     //Criar usuario
     //Composição corporal
     //Progressão de Metricas
+
+Arquitetura:
+    Ajustar os Diagramas
+
+    Criar as tabelas e Relacionamentos no BDD
+
+    Criar os Endpoints:
+        Usuario
+        Alimentação
+        Workouts
+
+    Criar o FrontEnd
