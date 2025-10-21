@@ -35,7 +35,7 @@ model BodyComposition {
   body_composition_gender         Boolean //0 for male 1 for female
   body_composition_activity_level Int // 1 to 7
   user                            User     @relation(fields: [user_id], references: [user_id])
-  user_id                         String
+  user_id                         String   @unique
   created_at                      DateTime @default(now()) @db.Timestamp(6)
   updated_at                      DateTime @updatedAt @db.Timestamp(6)
 }
@@ -49,6 +49,7 @@ model DietGoal {
   diet_goal_fiber        Int
   diet_goal_water        Int
   Diet                   Diet?
+  diet_id                String?  @unique
   created_at             DateTime @default(now()) @db.Timestamp(6)
   updated_at             DateTime @updatedAt @db.Timestamp(6)
 }

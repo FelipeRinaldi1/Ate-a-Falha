@@ -6,14 +6,28 @@ const PORT = 3000
 async function main() {
 
     const user = await prismaObj.user.findFirst({
-        include:{
-            BodyComposition:true
-        }
+        where: { user_email: "felipe.rinaldi.sobreira0@gmail.com"},
+        include: { BodyComposition: true, Diet: true }
     })
+    const diet = await prismaObj.diet.findFirst({
+        where: { user_id: user?.user_id },
+        include: { dietGoal: true, Meal: { include: { MealWithFood: true } } }
+    })
+    const mealsWithFood = await prismaObj.mealWithFood.findMany({
+        where: { meal: { diet_id: diet?.diet_id } },
+        include: { food: true, meal: true }
+    })
+
     console.log(user)
-    app.listen(PORT,()=>{
-        console.log(`Server running on http://localhost:${PORT}`)
-    })
+    console.log(diet)
+    console.log(mealsWithFood)
+
+    
+
+
+    app.listen(PORT, ()=>{
+        console.log(`Server running on port ${PORT}`);
+    });
 }
 
 main()
